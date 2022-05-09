@@ -10,7 +10,7 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="../assets/image/vchs-zp-img.png">
     
-    <title>ВЧС УПП Запоріжжя</title>
+    <title id="titleHead">ВЧС УПП Запоріжжя</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/libs/bootstrap/bootstrap.css">
     
@@ -74,10 +74,12 @@
         const dataFile = {
             title: 'Звіт по ВСП',
         };
+        const titleHead = document.getElementById('titleHead');
         const breadcrumbTitlePage = document.getElementById('breadcrumbTitlePage');
         const titlePage = document.getElementById('titlePage');
         breadcrumbTitlePage.innerText = dataFile.title;
-        titlePage.innerText = dataFile.title; 
+        titlePage.innerText = dataFile.title;
+        titleHead.innerText = dataFile.title;
     </script>
 </body>
 
