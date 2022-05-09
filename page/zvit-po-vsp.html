@@ -41,13 +41,13 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="../index.html">Головна</a></li>
-                  <li class="breadcrumb-item text-capitalize active" aria-current="page">
+                  <li class="breadcrumb-item text-capitalize active" aria-current="page" id="breadcrumbTitlePage">
                       зразок сторінки
                   </li>
                 </ol>
             </nav>
             
-            <h2 class="mb-3 text-uppercase">зразок сторінки</h2>
+            <h2 class="mb-3 text-uppercase" id="titlePage">зразок сторінки</h2>
             <div class="row">
                 <div class="col list">   
                   <iframe width="90%" height="600" src="https://docs.google.com/spreadsheets/d/1TB2ia73A7fDtNqRSMD7IMKDjoCbLM0rL9vc-19fWmsA/edit?usp=sharing" title="W3Schools Free Online Web Tutorials"></iframe>
@@ -68,6 +68,16 @@
         $(document).ready(function() {
             $('#search').hideseek({highlight: true});
         });
+    </script>
+    
+    <script>
+        const dataFile = {
+            title: 'Звіт по ВСП',
+        };
+        const breadcrumbTitlePage = document.getElementById('breadcrumbTitlePage');
+        const titlePage = document.getElementById('titlePage');
+        breadcrumbTitlePage.innerText = dataFile.title;
+        titlePage.innerText = dataFile.title; 
     </script>
 </body>
 
