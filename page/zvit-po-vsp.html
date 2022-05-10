@@ -78,13 +78,9 @@
         const breadcrumbTitlePage = document.getElementById('breadcrumbTitlePage');
         const titlePage = document.getElementById('titlePage');
         breadcrumbTitlePage.innerText = dataFile.title;
-        titlePage.innerText = dataFile.title;
+        //titlePage.innerText = dataFile.title;
+        titlePage.style.display = 'none';
         titleHead.innerText = dataFile.title;
-        
-        let name = document.querySelector('.name');
-        name.id = 'idName';
-        let idName = document.getElementById('idName');
-        idName.style.display = 'none';
     </script>
 </body>
 
