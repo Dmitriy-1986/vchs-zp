@@ -106,7 +106,7 @@
     function listSuperPlayers(jsonObj) {
       let playersVar = jsonObj.schedule;
 
-      for (let i = 0; i < playersVar.length; i++) {
+      for (let i = 0; i < playersVar[0].length; i++) {
         let tr = document.createElement('tr');
         players.appendChild(tr);
         tr.innerHTML = `<td>${playersVar[i].id}</td>
