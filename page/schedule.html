@@ -61,7 +61,7 @@
             <h2 class="mb-3 text-uppercase">графік чергування на червень</h2>
             <div class="row">
                 <table class="list table table-bordered border-primary">   
-                  <thead>
+                  <thead id="players">
                     <tr>
                       <th>№ з/п</th> <th>Прізвище, ім'я, по батькові</th> <th>Посада</th> 
                       <th>1</th> <th>2</th> <th>3</th> <th>4</th> <th>5</th> <th>6</th>
@@ -71,7 +71,6 @@
                       <th>25</th> <th>26</th> <th>27</th> <th>28</th> <th>29</th> <th>30</th>
                     </tr>
                   </thead>
-                  <tbody id="players"></tbody>
                 </table>
             </div>
         </div>
@@ -104,10 +103,10 @@
     }
 
     function listSuperPlayers(jsonObj) {
-      let playersVar = jsonObj.schedule;
-      let tr = document.createElement('tr');
-        players.appendChild(tr);
-        tr.innerHTML = `<td>${playersVar[0].id}</td>
+      let playersVar = jsonObj.schedule;                 
+      let tbody = document.createElement('tbody');//<tbody></tbody>
+        players.appendChild(tbody);
+        tbody.innerHTML = `<tr><td>${playersVar[0].id}</td>
                         <td>${playersVar[0].firstnameAndLastname}</td>
                         <td>${playersVar[0].jobTitle}</td>
                         <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td>
@@ -115,9 +114,9 @@
                         <td>13</td> <td>14</td> <td>15</td> <td>16</td> <td>17</td> <td>18</td>
                         <td>19</td> <td>20</td> <td>21</td> <td>22</td> <td>23</td> <td>24</td>
                         <td>25</td> <td>26</td> <td>27</td> <td>28</td> <td>29</td> <td>30</td>
-                        `;
+                        </tr>`;
         
-        tr.innerHTML += `<td>${playersVar[1].id}</td>
+        tr.innerHTML += `<tr><td>${playersVar[1].id}</td>
                         <td>${playersVar[1].firstnameAndLastname}</td>
                         <td>${playersVar[1].jobTitle}</td>
                         <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td>
@@ -125,9 +124,9 @@
                         <td>13</td> <td>14</td> <td>15</td> <td>16</td> <td>17</td> <td>18</td>
                         <td>19</td> <td>20</td> <td>21</td> <td>22</td> <td>23</td> <td>24</td>
                         <td>25</td> <td>26</td> <td>27</td> <td>28</td> <td>29</td> <td>30</td>
-                        `;
+                        </tr>`;
         
-        tr.innerHTML += `<td>${playersVar[2].id}</td>
+        tr.innerHTML += `<tr><td>${playersVar[2].id}</td>
                         <td>${playersVar[2].firstnameAndLastname}</td>
                         <td>${playersVar[2].jobTitle}</td>
                         <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td>
@@ -135,7 +134,7 @@
                         <td>13</td> <td>14</td> <td>15</td> <td>16</td> <td>17</td> <td>18</td>
                         <td>19</td> <td>20</td> <td>21</td> <td>22</td> <td>23</td> <td>24</td>
                         <td>25</td> <td>26</td> <td>27</td> <td>28</td> <td>29</td> <td>30</td>
-                        `;
+                        </tr>`;
         
         tr.innerHTML += `<td>${playersVar[3].id}</td>
                         <td>${playersVar[3].firstnameAndLastname}</td>
@@ -147,7 +146,7 @@
                         <td>25</td> <td>26</td> <td>27</td> <td>28</td> <td>29</td> <td>30</td>
                         `;
         
-        tr.innerHTML += `<td>${playersVar[4].id}</td>
+        tr.innerHTML += `<tr><td>${playersVar[4].id}</td>
                         <td>${playersVar[4].firstnameAndLastname}</td>
                         <td>${playersVar[4].jobTitle}</td>
                         <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td>
@@ -155,9 +154,9 @@
                         <td>13</td> <td>14</td> <td>15</td> <td>16</td> <td>17</td> <td>18</td>
                         <td>19</td> <td>20</td> <td>21</td> <td>22</td> <td>23</td> <td>24</td>
                         <td>25</td> <td>26</td> <td>27</td> <td>28</td> <td>29</td> <td>30</td>
-                        `;
+                        </tr>`;
         
-        tr.innerHTML += `<td>${playersVar[5].id}</td>
+        tr.innerHTML += `<tr><td>${playersVar[5].id}</td>
                         <td>${playersVar[5].firstnameAndLastname}</td>
                         <td>${playersVar[5].jobTitle}</td>
                         <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td>
@@ -165,9 +164,9 @@
                         <td>13</td> <td>14</td> <td>15</td> <td>16</td> <td>17</td> <td>18</td>
                         <td>19</td> <td>20</td> <td>21</td> <td>22</td> <td>23</td> <td>24</td>
                         <td>25</td> <td>26</td> <td>27</td> <td>28</td> <td>29</td> <td>30</td>
-                        `;
+                        </tr>`;
         
-        tr.innerHTML += `<td>${playersVar[6].id}</td>
+        tr.innerHTML += `<tr><td>${playersVar[6].id}</td>
                         <td>${playersVar[6].firstnameAndLastname}</td>
                         <td>${playersVar[6].jobTitle}</td>
                         <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td>
@@ -175,9 +174,9 @@
                         <td>13</td> <td>14</td> <td>15</td> <td>16</td> <td>17</td> <td>18</td>
                         <td>19</td> <td>20</td> <td>21</td> <td>22</td> <td>23</td> <td>24</td>
                         <td>25</td> <td>26</td> <td>27</td> <td>28</td> <td>29</td> <td>30</td>
-                        `;
+                        </tr>`;
         
-        tr.innerHTML += `<td>${playersVar[7].id}</td>
+        tr.innerHTML += `<tr><td>${playersVar[7].id}</td>
                         <td>${playersVar[7].firstnameAndLastname}</td>
                         <td>${playersVar[7].jobTitle}</td>
                         <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td>
@@ -185,9 +184,9 @@
                         <td>13</td> <td>14</td> <td>15</td> <td>16</td> <td>17</td> <td>18</td>
                         <td>19</td> <td>20</td> <td>21</td> <td>22</td> <td>23</td> <td>24</td>
                         <td>25</td> <td>26</td> <td>27</td> <td>28</td> <td>29</td> <td>30</td>
-                        `;
+                        </tr>`;
         
-        tr.innerHTML += `<td>${playersVar[8].id}</td>
+        tr.innerHTML += `<tr><td>${playersVar[8].id}</td>
                         <td>${playersVar[8].firstnameAndLastname}</td>
                         <td>${playersVar[8].jobTitle}</td>
                         <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td>
