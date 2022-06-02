@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph data-->
+    <meta property="og:title" content="ВЧС УПП Запоріжжя">
+    <meta property="og:description" content="ВЧС УПП Запоріжжя">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../assets/image/hizhak.jpeg">
+    
+    <title>ВЧС УПП Запоріжжя</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/libs/bootstrap/bootstrap.css">
+    
+    <!-- Shortcut Icon -->
+    <link rel="shortcut icon" href="../assets/image/hizhak.jpeg" type="image/png">
+    
+    <style>
+        /* Style CSS */   
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../index.html">ВЧС УПП Запоріжжя</a>
+                    <div class="d-flex justify-content-end" id="navbarSupportedContent">
+                          <input type="text" id="search" name="search" data-list=".list" value="" class="form-control mx-auto" placeholder="Пошук по сторінці..." >
+                    </div>
+                </div>
+            </nav>
+        </div>
+        
+        <div class="container mt-3">
+            
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="../index.html">Головна</a></li>
+                  <li class="breadcrumb-item text-capitalize active" aria-current="page">
+                      зразок сторінки
+                  </li>
+                </ol>
+            </nav>
+            
+            <h2 class="mb-3 text-uppercase">зразок сторінки</h2>
+            <div class="row">
+                <table class="list table table-hover">   
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">First</th>
+                      <th scope="col">Last</th>
+                      <th scope="col">Handle</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td colspan="2">Larry the Bird</td>
+                      <td>@twitter</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <!-- JS -->
+    <script src="../assets/libs/jquery/jquery-3.6.0.js"></script>
+    <script src="../assets/libs/hideseek/hideseek.min.js"></script>    
+    <script src="../assets/libs/bootstrap/bootstrap.js"></script>
+    <script src="../assets/libs/bootstrap/bootstrap.bundle.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#search').hideseek({highlight: true});
+        });
+    </script>
+</body>
+
+</html>
